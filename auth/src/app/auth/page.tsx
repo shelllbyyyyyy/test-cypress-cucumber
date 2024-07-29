@@ -1,16 +1,8 @@
 import React from "react";
 
-import { Auth } from "@/components/auth-card";
-import { createClient } from "@/utils/supabase/server";
-import { redirect } from "next/navigation";
+import { Auth } from "@/components/card/auth-card";
 
 const Login = async () => {
-  const supabase = createClient();
-
-  const { data } = await supabase.auth.getUser();
-
-  if (data.user) redirect("/");
-
   return (
     <section
       id="login"
