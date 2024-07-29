@@ -49,6 +49,8 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
               placeholder={props.placeholder}
               {...field}
               type={props.type}
+              id={props.name}
+              value={props.name}
               className="shad-input border-0"
             />
           </FormControl>
